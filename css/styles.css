@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    color: rgb(255, 164, 164);
+    color: white;
 }
 
 .accCounters span {
