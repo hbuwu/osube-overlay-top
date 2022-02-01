@@ -10,7 +10,9 @@ socket.onclose = event => {
 socket.onerror = error => console.log("Socket Error: ", error);
 
 let currentSR = new CountUp('currentSR', 0, 0, 2, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: "." })
-let pp = new CountUp('pp', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: "." })
+let currentPP = new CountUp('currentPP', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: ".", suffix: "pp", prefix: "Live: " })
+let fcPP = new CountUp('fcPP', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: ".", suffix: "pp", prefix: "FC: " })
+let ur = new CountUp('ur', 0, 0, 2, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: ".", prefix: "UR: " })
 let h100 = new CountUp('h100', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: "." })
 let h50 = new CountUp('h50', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: "." })
 let h0 = new CountUp('h0', 0, 0, 0, .5, { useEasing: true, useGrouping: true, separator: " ", decimal: "." })
@@ -44,7 +46,9 @@ socket.onmessage = event => {
         let mapInfo = menu.bm.metadata;
         let mapStats = menu.bm.stats;
         currentSR.update(mapStats.SR);
-        pp.update(play.pp.current);
+        currentPP.update(play.pp.current);
+        fcPP.update(play.pp.fc);
+        ur.update(play.hits.unstableRate);
         h100.update(play.hits[100]);
         h50.update(play.hits[50]);
         h0.update(play.hits[0]);

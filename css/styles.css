@@ -22,7 +22,7 @@ body {
 
 .accCounters {
     position: absolute;
-    top: 225px;
+    top: 207px;
     left: -119px;
     width: 412px;
     padding-right: 15px;
@@ -68,8 +68,8 @@ body {
 }
 
 .mapStats {
-    position: relative;
-    top: 275px;
+    position: absolute;
+    top: 257px;
     left: -119px;
     width: 412px;
     height: 143px;
@@ -106,9 +106,8 @@ i {
 
 .mapStats .currentStarrating i {
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     margin: 0 2px;
-    padding-bottom: 3px;
     height: 100%;
 }
 
@@ -135,4 +134,56 @@ i {
     right: 25px;
     width: 140px;
     height: 100%;
+}
+
+.urCounter {
+    position: absolute;
+    top: 411px;
+    left: -233px;
+    width: 412px;
+    height: 30px;
+    background-image: url('../src/img/urBackground.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.urCounter p {
+    display: block;
+    padding-left: 244px;
+    font-size: 20px;
+    color: white;
+}
+
+.bottomStats {
+    position: absolute;
+    top: 1042px;
+    left: 1628px;
+    width: 412px;
+    height: 143px;
+    background-image: url('../src/img/ppBackground.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bottomStats p {
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.bottomStats #currentPP {
+    display: block;
+    position: absolute;
+    left: 22px;
+    top: 10px;
+}
+
+.bottomStats #fcPP {
+    display: block;
+    position: absolute;
+    left: 162px;
+    top: 10px;
 }
