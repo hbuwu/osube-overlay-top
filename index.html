@@ -2,20 +2,50 @@
 <html lang="en">
 
 <head>
-  <title>osu!be Overlay</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="deps/style.css">
+    <title>osu!be Overlay</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
 </head>
 
 <body>
-  <span id="pp"></span>
-  <span id="h100"></span>
-  <span id="h50"></span>
-  <span id="h0"></span>
-  <script src="deps/reconnecting-websocket.min.js"></script>
-  <script src="deps/countUp.js"></script>
-  <script src="index.js"></script>
+    <div class="container">
+        <div class="accCounters">
+            <span id="h100"></span>
+            <span id="h50"></span>
+            <span id="h0"></span>
+        </div>
+
+        <div class="mapStats">
+            <span id="bpm"></span>
+            <span id="srStat"></span>
+            <span id="cs"></span>
+            <span id="ar"></span>
+            <span id="od"></span>
+            <div class="chartContainer">
+                <div class="currentStarrating">
+                    <i class="fas fa-star" id="starIcon"></i>
+                    <p id="currentSR"></p>
+                </div>
+                <div id='basechart' class="chart">
+                    <canvas id="canvas" width="140" height="65"></canvas>
+                </div>
+                <div id='progress' class="chart">
+                    <canvas id="canvasSecond" width="140" height="65"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <span id="pp"></span>
+
+        <script src="js/reconnecting-websocket.min.js"></script>
+        <script src="js/Chart.min.js"></script>
+        <script src="js/smooth.js"></script>
+        <script src="js/countUp.js"></script>
+        <script src="js/index.js"></script>
+
+    </div>
 </body>
 
 </html>

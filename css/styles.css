@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 40px;
+    line-height: 0.6em;
+}
+
+.container {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+}
+
+.accCounters {
+    position: absolute;
+    top: 225px;
+    left: -119px;
+    width: 412px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: rgb(255, 164, 164);
+}
+
+.accCounters span {
+    display: block;
+    margin: 0 15px;
+    font-size: 25px;
+    position: relative;
+    width: 60px;
+    text-align: center;
+}
+
+.accCounters span::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 9px;
+    bottom: -15px;
+    left: 0;
+    border-radius: 10px;
+}
+
+#h100::after {
+    background-color: #57FF51;
+}
+
+#h50::after {
+    background-color: #5180FF;
+}
+
+#h0::after {
+    background-color: #FF5151;
+}
+
+#pp {
+    color: white;
+}
+
+.mapStats {
+    position: relative;
+    top: 275px;
+    left: -119px;
+    width: 412px;
+    height: 143px;
+    background-image: url('../src/img/statBackground.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mapStats span {
+    display: block;
+    padding-left: 130px;
+    font-size: 20px;
+    color: white;
+}
+
+.mapStats .currentStarrating {
+    position: absolute;
+    padding-left: 0;
+    top: 15px;
+    width: 144px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    color: white;
+}
+
+.mapStats .currentStarrating i {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 2px;
+    padding-bottom: 3px;
+    height: 100%;
+}
+
+.mapStats .currentStarrating p {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    margin: 0 2px;
+    height: 100%;
+}
+
+.mapStats .chart {
+    position: absolute;
+    overflow: hidden;
+    bottom: 29px;
+}
+
+.mapStats #basechart {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.mapStats .chartContainer {
+    position: absolute;
+    right: 25px;
+    width: 140px;
+    height: 100%;
+}
