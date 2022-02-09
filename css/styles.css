@@ -129,6 +129,10 @@ i {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+.mapStats #progress {
+    border: 2px solid transparent;
+}
+
 .mapStats .chartContainer {
     position: absolute;
     right: 25px;
