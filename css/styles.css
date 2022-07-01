@@ -14,6 +14,15 @@ body {
     line-height: 0.6em;
 }
 
+#container {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+#container.view {
+    opacity: 1;
+}
+
 .container {
     position: relative;
     width: 1920px;

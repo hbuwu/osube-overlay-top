@@ -40,6 +40,9 @@ let seek;
 let fullTime;
 let onepart;
 
+// Get container
+let container = document.getElementById('container');
+
 socket.onmessage = event => {
     try {
         let data = JSON.parse(event.data), menu = data.menu, play = data.gameplay;
@@ -92,6 +95,21 @@ socket.onmessage = event => {
             seek = data.menu.bm.time.current;
             progressChart.style.width = onepart * seek + 'px'
         }
+
+        let gamestate = menu.state;
+
+        if (gamestate === 2) {
+
+            container.classList.add('view');
+
+        }
+
+        if (gamestate === 7 || gamestate === 14) {
+
+            container.classList.remove('view');
+
+        }
+
     } catch (err) { console.log(err); };
 };
 
